@@ -1,0 +1,32 @@
+<% provide(:title, "Edit User") %>
+<h1 class="center">Update your profile</h1>
+
+		<%= form_for(@user) do |f| %>
+			<aside class="sidebar" >
+				<div class="avatar">
+					<%= image_tag @user.avatar, class: "user_avatar" %>
+				</div>
+				<p class="user_name"><%= @user.name %></p>
+				<p class="choose_file"><%= f.file_field :avatar, accept: 'image/jpeg, image/gif, image/png, image/jpg' %></p>
+			</aside>
+			<div class="user_content">
+				<%= render 'shared/error_messages' %>
+
+			      <%= f.label :name %>
+			      <%= f.text_field :name, class: 'form-control' %>
+
+			      <%= f.label :email %>
+			      <%= f.email_field :email, class: 'form-control' %>
+
+			      <%= f.label :password %>
+			      <%= f.password_field :password, class: 'form-control' %>
+
+			      <%= f.label :password_confirmation, "Confirmation" %>
+			      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+				<br>
+				<%= f.submit "Update your profile", class: "btn btn-primary" %>
+
+			</div>
+		<% end %>
+

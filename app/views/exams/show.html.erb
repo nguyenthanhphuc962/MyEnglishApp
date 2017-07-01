@@ -1,0 +1,30 @@
+<% provide(:title,  @exam.name ) %>
+<h1 class="center"><%= @exam.name %></h1>
+
+<%# user = User.find_by(session[:user_id]) %>
+<%# exam = Exam.find(params[:id])  %>
+<% @test = current_user.tests.build(date_test: "nil", user_id: current_user.id) %>
+
+<% @test_detail = @test.test_details.build(test_id: @test.id, exam_id: @exam.id, time_start: "nil", time_end: "nil")  %>
+	
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<ol class="background_exam">
+			<br><br>
+			<% @exam.questions.each do |question| %>
+				<li><b><%= question.content %></b></li>
+				<ul class="none_style">
+					<% question.choices.each do |choice| %>
+						<% content = choice.content %>
+						<li><%= radio_button_tag "choice #{ choice.question_id }", :content %><span class="choice"><%= content %></span></li>						
+					<% end %>
+				</ul>
+				<br>
+			<% end %>
+		</ol>
+		<% session[:exam_id] = @exam.id %>
+		<%= button_to "Done", result_path, method: :get, class: "btn btn-primary" %>
+		<%#= button_to "Adding question", new_exam_question_path(@exam) %>
+	</div>
+</div>
+

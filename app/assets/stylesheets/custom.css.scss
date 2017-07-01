@@ -1,0 +1,298 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body, html {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.intro {
+	background: url(learning.jpg) no-repeat 50% 50%;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	display: table;
+	//padding: -60px 0 0 0;
+	//margin-top: -60px;
+	.inner {
+		display: table-cell;
+		vertical-align: middle;
+		width: 100%;
+		max-width: none;
+		.content {
+			max-width: 600px;
+			margin: auto;
+			//border: 1px solid red;
+			text-align: center;
+			h1{
+				font-size: 300%;
+				color: #fff;
+			}
+			button {
+				font-size: 150%;
+			}
+			
+		}
+		
+	}
+}
+
+
+header {
+	background-color: black;
+	height: 60px;
+	z-index: 1000px;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	opacity: 0.7;
+	nav {
+		ul {
+			list-style-type: none;
+			float: right;
+			li {
+				display: inline-block;
+				padding: 15px 0;
+				a {
+					color: #fff;
+					text-decoration: none;
+					font-size: 130%;
+					padding: 20px;
+					&:hover {
+						text-decoration: underline;
+						color: orange;
+					}
+				}
+			}
+		}
+}
+
+
+
+}
+
+
+
+
+
+/* Showing user */
+
+	.sidebar {
+		width: 30%;
+		float: left;
+		margin: 80px 0 0 0;
+	}
+	.avatar {
+		margin: auto;
+		width: 50%;
+		//width: 200px;
+		height: 180px;
+		border: 2px solid blue;
+		border-radius: 5px;
+		//background: url(Icon-user.png) no-repeat;
+		//background-size: cover;
+		p {
+			color: black;
+			font-size: 130%;
+			font-weight: bold;
+			text-align: center;
+			padding: 70px 0;
+
+		}
+
+	}
+
+	.user_name {
+		text-align: center;
+	}
+
+	.user_content {
+		width: 60%;
+		float: left;
+		margin: 80px 0 0 2%;
+	}
+
+	.choose_file {
+		//text-align: center;
+		
+		margin: 0 0 0 20%;
+	}
+
+	.user_avatar {
+		width: 100%;
+		height: 175px;
+	}
+
+
+
+/* Dropdown */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	z-index: 1000;
+	padding: 10px;
+	max-width: 160px;
+	box-shadow: 0px 8px 16px 0px rbga(0, 0, 0, 0.2);
+	border: 1px solid black;
+	right: 0px;
+	background-color: black;
+	opacity: 0.7;
+	a {
+		color: #fff;
+	}
+	.divider {
+		border-bottom: 1px solid #fff;
+	}
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+
+/* Heading */
+.center {
+	text-align: center;
+	padding: 50px 0px 0px 0px;
+}
+
+
+/* Style */
+.none_style {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.choice {
+	padding: 10px;
+
+}
+
+* {
+	box-sizing: none;
+}
+/* Exams */
+#all_exams {
+	ul {
+		list-style-type: none;
+		text-align: center;
+		margin-top: 40px;
+		li {
+			&:first-child {
+				margin: 0;
+			}
+			width: 15%;
+			height: 180px;
+			background: url(exam2.jpg);
+			background-size: cover;
+			opacity: 0.7;
+			margin:  10px 0 0 20px;
+			//display: table-cell;
+			//vertical-align: middle;
+			//max-width: none;
+			display: inline-block;
+			a {
+				p 
+				{
+					font-size: 150%;
+					color: red;
+					text-align: center;
+					max-width: 150px;
+					margin: auto;
+					text-decoration: none;
+					padding: 15px;
+				}
+			}
+
+			p {
+				font-size: 120%;
+				color: red;
+			}
+
+		}
+	}
+}
+
+.background-exams {
+	width: 100%;
+	border: 1px solid black;
+	background-color: grey;
+	opacity: 0.8;
+}
+
+.exam-style {
+	background: url(exam-icon-new.png);
+	background-size: cover;
+	opacity: 0.8;
+	width: 10%;
+	height: 70px;
+	float: left;
+}
+.exam-heading {
+
+}
+
+
+
+.user_content {
+	ul {
+		list-style-type: none;
+		//float: left;
+
+
+	}
+
+}
+
+.divider {
+		margin: 100px 0 0 0;
+		border-bottom: 1px solid grey;
+}
+
+.background_exam {
+	background-color: #F5F5F5;	//#F8F8FF;
+	//opacity: 0.7;
+	border: 1px solid black;
+	width: 100%;
+
+}
+
+.result {
+	background-color: #F5F5F5;
+	border: 1px solid black;
+	max-width: 600px;
+	margin: auto;
+	p, h3 {
+		
+		text-align: center;
+	}
+
+}
+.answer {
+	margin: auto;
+}
+
+/* Showing Users */
+
+#index_users {
+	list-style-type: none;
+
+}
+.border {
+		border: 1px solid black;
+	}
+.users {
+	max-width: 100px;
+	height: 70px;
+	border-radius: 5px;
+
+}

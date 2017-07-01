@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  test: one
+  exam: one
+  time_start: 2017-06-24 17:32:36
+  time_end: 2017-06-24 17:32:36
+
+two:
+  test: two
+  exam: two
+  time_start: 2017-06-24 17:32:36
+  time_end: 2017-06-24 17:32:36

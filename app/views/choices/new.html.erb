@@ -1,0 +1,24 @@
+<% provide(:title, "Adding Choices") %>
+<h1 class="center">Adding Choices </h1>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">  
+			<%= form_for([@exam, @question, @question.choices.build]) do |f| %>
+			
+				<%= f.label :content %>
+				<%= f.text_field :content, class: "form-control"%>
+
+				<%= f.label :is_correct %>
+				<%= f.number_field :is_correct, class: "form-control", placeholder: "1 for True or 0 for False" %>
+
+				
+				<br>
+				<%= f.submit "Adding Choices", class: "btn btn-primary" %>
+
+			<% end %>
+
+			<%= link_to "Create New Question", new_exam_question_path(@exam) %>
+	</div>
+</div>
+
+
+

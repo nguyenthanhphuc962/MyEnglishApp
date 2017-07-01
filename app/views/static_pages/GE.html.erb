@@ -1,0 +1,31 @@
+<% provide(:title, "General English") %>
+<h1 class="center">General English</h1>
+
+<% @test = current_user.tests.build %>
+<%  @test_detail = @test.test_details.build  %>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<% exam = Exam.find(1) %>
+		<ol>
+			<% exam.questions.each do |question| %>
+				<li><%= question.content %></li>
+				<ul class="none_style">
+					<% question.choices.each do |choice| %>
+						<% content = choice.content %>
+
+						<li><%= radio_button_tag "choice #{ choice.question_id }", :content %><span class="choice"><%= content %></span></li>
+						
+						
+					<% end %>
+				</ul>
+				<br>
+			<% end %>
+		</ol>
+		<%= button_to "Done", result_path, method: :get, class: "btn btn-primary" %>
+
+	</div>
+
+
+
+</div>
+

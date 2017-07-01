@@ -1,0 +1,21 @@
+<% provide(:title, "Answer") %>
+<h1 class="center">Answer</h1>
+<% @exam = Exam.find_by(id: session[:exam_id]) %>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<ol class="background_exam">
+			<br><br>
+			<% @exam.questions.each do |question| %>
+				<li><b><%= question.content %></b></li>
+				<ul class="none_style">
+						<% question.choices.each do |answer| %>
+							<% if answer.is_correct == 1 %>
+								<li><span class="choice"><%= answer.content %></span></li>	
+							<% end %>
+						<% end %>					
+				</ul>
+				<br>
+			<% end %>
+		</ol>
+	</div>
+</div>

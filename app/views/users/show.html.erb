@@ -1,0 +1,27 @@
+<% provide(:title, @user.name) %>
+
+<aside class="sidebar" >
+	<h3 style="text-align: center;">Avatar</h3>
+	<div class="avatar">
+		<%= image_tag @user.avatar, class: "user_avatar" %>
+	</div>
+	<p class="user_name"><%= @user.name %></p>
+</aside>
+<section class="user_content">
+	<h3>Exams( <%= Exam.count %> )</h3>
+	<% @user.tests.each do |u_test| %>
+		<% u_test.test_details.each do |test_detail| %>
+			<% @exam = Exam.find_by(id: test_detail.exam_id) %>
+			<div class="exam-style"></div>
+			<ul>
+				
+				<li><p>Id: <%= test_detail.exam_id %></p></li>
+				<li><p>Name: <%= @exam.name %></p></li>
+				<li><p>Time: <%= @exam.time %> minutes</p></li>
+				
+			</ul>
+			<div class="border"></div>
+			<!--<div class="divider"></div>-->
+		<% end %>
+	<% end %>
+</section>

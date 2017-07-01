@@ -1,0 +1,17 @@
+<% provide(:title, "Exams") %>
+<h1 class="center">Exams</h1>
+
+<section id="all_exams">
+	<ul>
+		<% @exams.each do |exam| %>
+		<li>
+			<a href="/exams/<%= exam.id %>">
+				<p><b><%= exam.name %></b></p>
+			</a>
+			<p>Time: <%= exam.time %> minutes.</p>
+		</li>
+		<% end %>
+		
+	</ul>
+
+</section>
