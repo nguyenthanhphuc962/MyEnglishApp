@@ -7,6 +7,9 @@
 	</div>
 	<p class="user_name"><%= @user.name %></p>
 </aside>
+
+
+
 <section class="user_content">
 	<h3>Exams( <%= Exam.count %> )</h3>
 	<% @user.tests.each do |u_test| %>
